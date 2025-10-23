@@ -101,7 +101,7 @@ function AddTransactionModal({ onAdd }: { onAdd: (transaction: Transaction) => v
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="fixed bottom-8 right-8 rounded-full w-16 h-16 shadow-2xl bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-110 flex items-center justify-center">
+        <Button className="fixed bottom-8 right-8 z-50 rounded-full w-16 h-16 shadow-2xl bg-gradient-to-br from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-110 flex items-center justify-center cursor-pointer">
           <Plus size={28} className="text-white" />
         </Button>
       </DialogTrigger>
