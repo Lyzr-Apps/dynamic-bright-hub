@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "updated_at": "2025-12-10T00:00:00Z",
+  "workflow": {
+    "nodes": [
+      {
+        "id": "input",
+        "type": "input",
+        "label": "User Query",
+        "nodeCategory": "input",
+        "description": "User sends a message through chat interface",
+        "position": { "x": 100, "y": 300 }
+      },
+      {
+        "id": "chat_agent",
+        "type": "agent",
+        "label": "Chat Agent",
+        "nodeCategory": "agent",
+        "description": "Conversational AI that maintains context and responds to user queries",
+        "position": { "x": 500, "y": 300 }
+      },
+      {
+        "id": "output",
+        "type": "end",
+        "label": "Response",
+        "nodeCategory": "end",
+        "description": "Chat response displayed to user",
+        "position": { "x": 900, "y": 300 }
+      }
+    ],
+    "edges": [
+      {
+        "source": "input",
+        "target": "chat_agent",
+        "label": "User message with context"
+      },
+      {
+        "source": "chat_agent",
+        "target": "output",
+        "label": "Contextual response"
+      }
+    ]
+  },
+  "agents": [
+    {
+      "agent_id": "69397792e6ce9b78c38a0594",
+      "node_id": "chat_agent",
+      "name": "Chat Agent",
+      "description": "Conversational AI agent that responds to user queries, maintains conversation context, and provides helpful, natural responses across various topics",
+      "agent_role": "Conversational AI Assistant",
+      "agent_goal": "Provide helpful, contextual, and natural responses to user queries while maintaining conversation memory and context",
+      "agent_instructions": "You are a friendly and helpful conversational AI assistant. Your role is to:\n\n1. Listen carefully to user queries and understand their intent\n2. Provide clear, concise, and helpful responses\n3. Maintain conversation context throughout the session - remember what was discussed previously\n4. Be conversational and natural in your responses\n5. Ask clarifying questions when needed\n6. Provide accurate information or acknowledge when you're unsure\n7. Adapt your tone to match the conversation\n8. Help users effectively by providing relevant information\n\nGuidelines:\n- Keep responses focused and relevant to the user's question\n- Use natural language without being overly formal\n- Break down complex topics into understandable parts\n- Remember context from previous messages in the conversation\n- Be helpful, friendly, and professional",
+      "provider_id": "OpenAI",
+      "model": "gpt-4.1",
+      "temperature": 0.7,
+      "top_p": 0.95,
+      "features": [],
+      "has_knowledge_base": false,
+      "rag_id": null,
+      "rag_name": null,
+      "position": { "x": 500, "y": 300 },
+      "created_at": "2025-12-10T00:00:00Z"
+    }
+  ],
+  "knowledge_bases": []
+}
